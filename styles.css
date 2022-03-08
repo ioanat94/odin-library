@@ -3,6 +3,131 @@
     padding: 0;
 }
 
+body {
+    background-color: #1e293b;
+    color: #e2e8f0;
+    font-family: 'Montserrat', sans-serif;
+}
+
 form {
     display: none;
+    font-size: 20px;
+}
+
+.form-flex {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+#main-title {
+    font-size: 64px;
+    font-weight: 900;
+    text-align: center;
+    background-color: #0f172a;
+    padding: 20px 0px;
+}
+
+#main-content {
+    display: grid;
+    justify-items: center;
+    row-gap: 40px;
+}
+
+#new-book-btn {
+    margin-top: 20px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e2e8f0;
+}
+
+#new-book-btn:hover {
+    background-color: #aaaeb4;
+}
+
+#add-button {
+    border: none;
+    border-radius: 5px;
+    background-color: #e2e8f0;
+    padding: 5px 20px;
+}
+
+#add-button:hover {
+    background-color: #aaaeb4;
+}
+
+#author, #title, #pages {
+    height: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-indent: 5px;
+}
+
+#read {
+    width: 20px;
+    height: 20px;
+}
+
+button, #add-button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+#book-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    row-gap: 40px;
+    column-gap: 40px;
+}
+
+.book-card {
+    text-align: center;
+    border-radius: 10px;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    width: 30vh;
+    height: 300px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    font-size: 24px;
+    padding: 20px 0px;
+}
+
+.read-btn-read {
+    background-color: #007700;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0px 40px;
+}
+
+.read-btn-not-read {
+    background-color: #da0101;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0px 20px;
+}
+
+.read-btn-not-read:hover {
+    background-color: #ff0000;
+}
+
+.read-btn-read:hover {
+    background-color: #009900;
+}
+
+.remove-btn {
+    padding: 0px 22px;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    background-color: #e2e8f0;
+}
+
+.remove-btn:hover {
+    background-color: #aaaeb4;
 }

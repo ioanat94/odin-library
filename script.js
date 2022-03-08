@@ -23,10 +23,10 @@ function displayStorageBooks() {
 };
 
 newBookButton.addEventListener('click', function() {
-    if (form.style.display == "block") {
-        form.style.display = "none";
+    if (form.classList.contains("form-flex")) {
+        form.classList.remove("form-flex");
     } else {
-        form.style.display = "block";
+        form.classList.add("form-flex");
     }
 });
 
@@ -68,17 +68,22 @@ function displayBook(book) {
     let readBtn = document.createElement('button');
     let removeBtn = document.createElement('button');
 
+    bookEntry.classList.add("book-card");
+
     author.textContent = `${book.author}`;
-    title.textContent = `${book.title}`;
+    title.textContent = `"${book.title}"`;
     pages.textContent = `${book.pages} pages`;
 
     if (book.read) {
         readBtn.textContent = 'Read';
+        readBtn.classList.add("read-btn-read");
     } else {
         readBtn.textContent = 'Not read';
+        readBtn.classList.add("read-btn-not-read");
     }
 
     removeBtn.textContent = 'Remove';
+    removeBtn.classList.add("remove-btn");
     removeBtn.addEventListener('click', function() {
         let books = Array.from(bookList.childNodes);
         myLibrary.splice(books.indexOf(bookEntry), 1);
@@ -90,9 +95,13 @@ function displayBook(book) {
         if (book.read) {
             book.read = false;
             readBtn.textContent = 'Not read';
+            readBtn.classList.remove("read-btn-read");
+            readBtn.classList.add("read-btn-not-read");
         } else {
             book.read = true;
             readBtn.textContent = 'Read';
+            readBtn.classList.remove("read-btn-not-read");
+            readBtn.classList.add("read-btn-read");
         }
     };
 

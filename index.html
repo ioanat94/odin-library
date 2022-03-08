@@ -6,21 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="script.js" defer></script>
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
         <title>My Library</title>
+        <link rel="icon" type="image/x-icon" href="books_emoji.png">
     </head>
     <body>
-        <button type="button" id="new-book-btn">+ New Book</button>
-        <form action="" method="POST" id="book-form" onsubmit="event.preventDefault();">
-            <label for="author">Author</label>
-            <input type="text" name="author" id="author" required>
-            <label for="title">Title</label>
-            <input type="text" name="title" id="title" required>
-            <label for="pages">Pages</label>
-            <input type="number" name="pages" id="pages" required>
-            <label for="read">Read</label>
-            <input type="checkbox" name="read" id="read">
-            <input type="submit" id="add-button" value="Add">
-        </form>
-        <div id="book-list"></div>
+        <div id="main-title">My Library</div>
+        <div id="main-content">
+            <button type="button" id="new-book-btn">+ New Book</button>
+            <form action="" method="POST" id="book-form" onsubmit="event.preventDefault(); event.target.reset();">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author" required>
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title" required>
+                <label for="pages">Pages</label>
+                <input type="number" name="pages" id="pages" required>
+                <label for="read">Read?</label>
+                <input type="checkbox" name="read" id="read">
+                <input type="submit" id="add-button" value="Add">
+            </form>
+            <div id="book-list"></div>
+        </div>
     </body>
 </html>
